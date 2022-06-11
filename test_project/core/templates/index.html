@@ -37,10 +37,7 @@
             <tr>  
 
               <th scope="col">
-                <label class="control control--checkbox">
-                  <input type="checkbox"  class="js-check-all"/>
-                  <div class="control__indicator"></div>
-                </label>
+                
               </th>
 
               
@@ -50,7 +47,7 @@
               <th scope="col">Location</th>
               <th scope="col">Condition</th>
               <th scope="col">Seller</th>
-              <th scope="col">URL</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -62,17 +59,15 @@
               <td>
                 {{ scrape.id }}
               </td>
-              <td><a href="#">
-                {{ scrape.item }}
-              </a></td>
+              <td><a href="{{ scrape.url }}" target="_blank"> {{ scrape.item }} </a></td>
+              
               <td>
-                Web Designer
-                <small class="d-block">Far far away, behind the word mountains</small>
+                {{ scrape.price }}
               </td>
-              <td>+63 983 0962 971</td>
-              <td>NY University</td>
-              <td>NY University</td>
-              <td>NY University</td>
+              <td>{{ scrape.location }}</td>
+              <td>{{ scrape.condition }}</td>
+              <td>{{ scrape.seller}}</td>
+              <td></td>
             </tr>
             <tr class="spacer"><td colspan="100"></td></tr>
             {% endfor %}  
