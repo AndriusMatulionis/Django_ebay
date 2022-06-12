@@ -16,7 +16,7 @@ def extract(asin, items_per_page):
 
 
 def main():
-    items = extract("samsung s22", "9")
+    items = extract("iphone 13 pro max", "240")
     item_id = 0
     c.execute("  DROP TABLE IF EXISTS scraped")
     print("Table 'scraped' DELETED")
